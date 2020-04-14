@@ -13,6 +13,8 @@ In other to get the code to build with MinGW, you have to apply the following fi
 
 2. You have to replace "gl/gl.h" with "GL/gl.h" in sgl_opengl.c
 
+3. You have to link with kernel32, user32, gdi32, gdiplus, msimg32, shlwapi, opengl32, glu32, comctl32, advapi32.
+
 In case you just use the DLLs provided by sgldllkit, you could create the import library for MinGW using the .def file and MinGW's dlltool.
 
 In my binding, I merged all of sgl headers to one header sgl.h and commented out all of the macros on sgl_debug.h because I can't accurately translate them to Pascal. These macros are not mandatory, but very useful if you develop with SGL in C, though. With Pascal, you can use proper exception handling feature of the language.
